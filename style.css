@@ -130,3 +130,26 @@ footer {
   padding: 20px;
   opacity: 0.6;
 }
+/* Social icons */
+.social-icons a {
+  margin-left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Instagram glow */
+.social-icons a:nth-child(1):hover {
+  color: #ff4d6d;
+  text-shadow: 0 0 10px #ff4d6d;
+}
+
+/* YouTube glow */
+.social-icons a:nth-child(2):hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
