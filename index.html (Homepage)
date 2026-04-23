@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Akshith Aithal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="books.html">Books</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Akshith Aithal</h1>
+  <p>Author | Storyteller | Explorer of Ideas</p>
+  <a href="books.html" class="btn">Explore Books</a>
+</section>
+
+<section>
+  <h2>Featured Work</h2>
+  <h3>Devi Bhagavatam – The Cosmic Saga</h3>
+  <p>A journey through divine power and cosmic truth.</p>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <p>I am a student and emerging author exploring mythology and storytelling.</p>
+  <a href="about.html" class="btn">Read More</a>
+</section>
+
+<footer>
+  <p>© 2026 Akshith Aithal</p>
+</footer>
+
+</body>
+</html>
