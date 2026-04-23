@@ -1,3 +1,6 @@
+/* =========================
+   🌍 GLOBAL STYLES
+========================= */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -6,7 +9,9 @@ body {
   overflow-x: hidden;
 }
 
-/* 🌌 NEBULA BACKGROUND */
+/* =========================
+   🌌 NEBULA BACKGROUND
+========================= */
 body::before,
 body::after {
   content: "";
@@ -19,32 +24,34 @@ body::after {
   opacity: 0.6;
 }
 
-/* 🔴 Red nebula (left) */
+/* 🔴 Red nebula */
 body::before {
   left: -10%;
   background: radial-gradient(circle, red, transparent 70%);
   animation: moveRed 20s infinite alternate ease-in-out;
 }
 
-/* 🟢 Green nebula (right) */
+/* 🟢 Green nebula */
 body::after {
   right: -10%;
   background: radial-gradient(circle, limegreen, transparent 70%);
   animation: moveGreen 25s infinite alternate ease-in-out;
 }
 
-/* Movement animations */
+/* Animation */
 @keyframes moveRed {
-  from { transform: translateY(0px); }
+  from { transform: translateY(0); }
   to { transform: translateY(50px); }
 }
 
 @keyframes moveGreen {
-  from { transform: translateY(0px); }
+  from { transform: translateY(0); }
   to { transform: translateY(-50px); }
 }
 
-/* 🌟 Stars layer */
+/* =========================
+   🌟 STARS BACKGROUND
+========================= */
 .stars {
   position: fixed;
   width: 100%;
@@ -53,10 +60,13 @@ body::after {
   z-index: -1;
 }
 
-/* Navbar */
+/* =========================
+   🧭 NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
   background: rgba(0,0,0,0.7);
   backdrop-filter: blur(10px);
@@ -67,9 +77,9 @@ body::after {
 .logo {
   color: gold;
   font-weight: bold;
+  font-size: 18px;
 }
 
-/* Links */
 .nav-links a {
   color: white;
   margin-left: 20px;
@@ -81,7 +91,38 @@ body::after {
   color: gold;
 }
 
-/* Hero */
+/* =========================
+   📱 SOCIAL ICONS
+========================= */
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover svg {
+  transform: scale(1.2);
+}
+
+/* Instagram glow */
+.social-icons a:nth-child(1):hover svg {
+  fill: #ff4d6d;
+  filter: drop-shadow(0 0 10px #ff4d6d);
+}
+
+/* YouTube glow */
+.social-icons a:nth-child(2):hover svg {
+  fill: red;
+  filter: drop-shadow(0 0 10px red);
+}
+
+/* =========================
+   🎬 HERO SECTION
+========================= */
 .hero {
   text-align: center;
   padding: 120px 20px;
@@ -92,7 +133,13 @@ body::after {
   text-shadow: 0 0 25px gold;
 }
 
-/* Button */
+.hero p {
+  opacity: 0.8;
+}
+
+/* =========================
+   🔘 BUTTONS
+========================= */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -108,13 +155,17 @@ body::after {
   transform: scale(1.1);
 }
 
-/* Sections */
+/* =========================
+   📦 SECTIONS
+========================= */
 .section {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* Cards */
+/* =========================
+   🧾 CARDS
+========================= */
 .card {
   margin: 20px auto;
   padding: 20px;
@@ -124,32 +175,118 @@ body::after {
   box-shadow: 0 0 25px rgba(255,215,0,0.3);
 }
 
-/* Footer */
+/* =========================
+   🎥 VIDEO SECTION
+========================= */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.video-container iframe {
+  width: 315px;
+  height: 560px;
+  border-radius: 20px;
+  box-shadow: 
+    0 0 30px rgba(255, 0, 0, 0.6),
+    0 0 30px rgba(0, 255, 0, 0.6);
+  transition: 0.3s;
+}
+
+.video-container iframe:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   ✨ FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.6;
 }
-/* Social icons */
-.social-icons a {
-  margin-left: 15px;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s;
+/* =========================
+   📱 MOBILE RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
 }
 
-.social-icons a:hover {
-  transform: scale(1.2);
+
+/* Mobile phones */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .social-icons {
+    margin-top: 5px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 40px 15px;
+  }
+
+  /* Cards */
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Video (important for Shorts) */
+  .video-container iframe {
+    width: 260px;
+    height: 460px;
+  }
 }
 
-/* Instagram glow */
-.social-icons a:nth-child(1):hover {
-  color: #ff4d6d;
-  text-shadow: 0 0 10px #ff4d6d;
-}
 
-/* YouTube glow */
-.social-icons a:nth-child(2):hover {
-  color: red;
-  text-shadow: 0 0 10px red;
-}
