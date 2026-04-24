@@ -197,6 +197,27 @@ body::after {
 .video-container iframe:hover {
   transform: scale(1.05);
 }
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.video-grid iframe {
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 
+    0 0 20px red,
+    0 0 20px lime;
+  transition: 0.3s;
+}
+
+.video-grid iframe:hover {
+  transform: scale(1.05);
+}
+
 
 /* =========================
    ✨ FOOTER
@@ -299,8 +320,14 @@ footer {
   height: 100%;
   z-index: -1; /* change from -3 */
 }
-
+@media (max-width: 600px) {
+  .video-grid iframe {
+    width: 250px;
+    height: 450px;
+  }
 }
+
+
 
 
 
