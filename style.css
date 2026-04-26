@@ -359,6 +359,37 @@ footer {
   transform: scale(1.1);
   box-shadow: 0 0 15px lime;
 }
+/* Divine styling ONLY for book page */
+
+.divine-page {
+  font-family: 'Noto Serif', serif;
+}
+
+.divine-page h1,
+.divine-page h2,
+.divine-page h3 {
+  font-family: 'Cinzel', serif;
+  color: gold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.divine-title {
+  font-size: 48px;
+  background: linear-gradient(90deg, gold, orange, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.divine-page p {
+  color: rgba(255,255,255,0.9);
+}
+
+.sanskrit {
+  font-style: italic;
+  color: gold;
+}
 
 
 
